@@ -33,6 +33,7 @@ nav ul {
 .name {
     color: #F0F0F0;
 }
+
 .last-name {
     color: darkgoldenrod;
 }
@@ -144,7 +145,7 @@ nav a {
     }
     .name,
     .last-name {
-    font-size: 1.3em;
+        font-size: 1.3em;
     }
     .main-text {
         font-size: 2em;
@@ -163,7 +164,7 @@ nav a {
     }
     .name,
     .last-name {
-    font-size: 1em;
+        font-size: 1em;
     }
 
 }
@@ -171,6 +172,7 @@ nav a {
 
 #projects {
     margin-top: 100px;
+    width: 80%;
     padding: 1em;
     display: grid;
     grid-template: auto / minmax(200px,1fr) minmax(200px,1fr) minmax(200px,1fr);
@@ -179,8 +181,8 @@ nav a {
 }
 
 .main-title {
-  grid-row: 1;
-  grid-column: 1 /-1;
+    grid-row: 1;
+    grid-column: 1 /-1;
 }
 
 .project-tile {
@@ -214,6 +216,7 @@ nav a {
 
 #skills {
     margin-top: 100px;
+    width: 80%;
     padding: 1em;
     display: grid;
     grid-template: auto / minmax(120px,1fr) minmax(120px,1fr) minmax(120px,1fr);
@@ -259,7 +262,7 @@ nav a {
     }
     .name,
     .last-name {
-    font-size: 1.3em;
+        font-size: 1.3em;
     }
     .main-text {
         font-size: 2em;
@@ -270,6 +273,7 @@ nav a {
 
 #profiles {
     margin-top: 100px;
+    width: 80%;
     display: grid;
     padding: 4em;
     grid-template: 150px / repeat(6,1fr);
@@ -305,11 +309,11 @@ nav a {
         align-items: center;
     }
     #profile-link {
-    grid-row: auto;
-    color: #f0f0f0;
+        grid-row: auto;
+        color: #f0f0f0;
     }
     .main-title {
-    font-size: 1.5em;
+        font-size: 1.5em;
     }
 }
 
@@ -321,6 +325,6 @@ nav a {
         text-align: center;
     }
     .main-title {
-    font-size: 1.5em;
+        font-size: 1.5em;
     }
 }
