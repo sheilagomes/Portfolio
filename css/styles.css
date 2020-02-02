@@ -42,6 +42,10 @@ nav ul {
     border-radius: 50%;
 }
 
+.highlight {
+    color: #F0F0F0;
+}
+
 .main-text {
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
@@ -103,6 +107,10 @@ nav a {
     margin-left: 1.5em; 
 }
 
+.current {
+    color: darkgoldenrod;
+}
+
 @media (max-width: 900px) {
     nav {
         flex-direction: column;
@@ -127,7 +135,7 @@ nav a {
 /* hero section */
 
 #welcome-section {
-    margin-top: 70px;
+    margin-top: 50px;
     font-size: 2em;
     width: 100vw;
     height: 100vh;
@@ -166,18 +174,25 @@ nav a {
     .last-name {
         font-size: 1em;
     }
-
+    .main-text {
+        font-size: 2em;
+    }
+    .subtitle {
+        font-size: 1em;
+        line-height: 1.2;
+    }
 }
 /* projects section */
 
 #projects {
-    margin-top: 100px;
+    margin: 100px auto 0;
     width: 80%;
     padding: 1em;
     display: grid;
-    grid-template: auto / minmax(200px,1fr) minmax(200px,1fr) minmax(200px,1fr);
-    /*grid-template-columns: repeat(4, minmax(200px,1fr));*/
+    grid-template: auto / repeat(3,1fr);
     grid-gap: 1em;
+    columns: 400px;
+    max-width: 1200px;
 }
 
 .main-title {
@@ -195,10 +210,32 @@ nav a {
     border-radius: 5%;
 }
 
+@media (max-width: 900px) {
+    #projects {
+        margin: 200px auto 0;
+        grid-template: auto / repeat(3,1fr);
+        columns: 250px;
+        max-width: 800px;
+    }
+    .main-title {
+        font-size: 1.5em;
+    }
+    .name,
+    .last-name {
+        font-size: 1.3em;
+    }
+    .main-text {
+        font-size: 2em;
+    }
+}
+
 @media (max-width: 600px) {
     #projects {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column;
+        columns: 200px;
+        max-width: 500px;
     }
     .main-title {
         font-size: 1.5em;
@@ -215,14 +252,14 @@ nav a {
 /* skills section */
 
 #skills {
-    margin-top: 100px;
+    margin: 100px auto 0;
     width: 80%;
     padding: 1em;
     display: grid;
-    grid-template: auto / minmax(120px,1fr) minmax(120px,1fr) minmax(120px,1fr);
+    grid-template: auto / repeat(3,1fr);
     grid-gap: 1em;
-    justify-content: center;
-    align-content: center;
+    columns: 400px;
+    max-width: 1200px;
 }
 
 .main-title {
@@ -232,7 +269,7 @@ nav a {
 
 .skill-tile {
     grid-row: 2;
-    padding: 2em;
+    padding: 0 2em;
     color: darkgoldenrod;
 }
 
@@ -241,24 +278,19 @@ nav a {
     margin: 1em;
 }
 
-.highlight {
-    color: #F0F0F0;
-}
-
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     #skills {
-        margin: 150px auto;
-        display: grid;
-        grid-template: none none none;
-        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
-        justify-content: center;
-        align-content: center;
+        margin: 200px auto 50px;
+        display: flex;
+        flex-direction: column;
+        columns: 200px;
+        max-width: 500px;        
     }
     .main-title {
         font-size: 1.5em;
     }
     .skill-tile {
-        padding: 1em;
+        padding: 0;
     }
     .name,
     .last-name {
@@ -272,14 +304,14 @@ nav a {
 /* profiles section */
 
 #profiles {
-    margin-top: 100px;
+    margin: 200px auto 0;
     width: 80%;
     display: grid;
-    padding: 4em;
-    grid-template: 150px / repeat(6,1fr);
+    padding: 2em;
+    grid-template: auto / repeat(6,1fr);
+    align-content: space-around; 
     grid-gap: 1em;
-    justify-content: space-around;
-    align-items: center;
+    max-width: 1000px;
 }
 
 #profiles-title {
@@ -297,16 +329,13 @@ nav a {
     color: darkgoldenrod;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     #profiles {
-        margin: 100px auto;
+        margin: 150px auto 50px;
         display: grid;
-        grid-template: none none none;
         grid-template-columns: repeat(auto-fill, minmax(300px,2fr));
         text-align: center;
-        grid-gap: 1em;
-        justify-content: space-around;
-        align-items: center;
+        grid-gap: 1.5em;
     }
     #profile-link {
         grid-row: auto;
@@ -317,11 +346,11 @@ nav a {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     #profiles {
-        margin: 100px auto;
+        margin: 150px auto 50px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px,2fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
         text-align: center;
     }
     .main-title {
