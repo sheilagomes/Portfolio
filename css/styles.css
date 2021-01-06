@@ -6,6 +6,9 @@
     --btn-color: #67B095;
     --light-color: #D6D0D0; /*#3CFFB1;*/
     --dark-color: #111717; /*#08161D;*/
+    --trans-accent-color: rgba(228, 136, 116, 0.6);
+    --trans-tag-color: rgba(135, 81, 84, 0.6);
+    --trans-btn-color: rgba(103, 176, 149, 0.6);
     --main-font: 'Libre Franklin', sans-serif;
     --secondary-font: 'Open Sans', sans-serif;
 }
@@ -23,12 +26,12 @@ a {
 /* Home section */
 
 #welcome-section {
+    padding: 0 1rem;
     display: flex;
     flex-direction: column-reverse;
 }
 
 #photo {
-    padding: 0 1rem;
     max-width: 150px;
     max-height: 150px;
     border-radius: 50%;
@@ -47,7 +50,6 @@ a {
     font-weight: 700;
     color: var(--accent-color);
     margin-bottom: 0;
-    transform: translateX(-1rem);
 }
 
 .subtitle {
@@ -56,7 +58,6 @@ a {
     font-weight: 600;
     color: var(--light-color);
     margin-top: 0;
-    transform: translateX(-1rem);
 }
 
 /* Skills section */
@@ -82,22 +83,47 @@ a {
     text-align: center;
 }
 
+.container {
+    max-width: 1125px;
+    margin: 0 auto;
+}
+
 #projects {
     margin-top: 2rem;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .project-tile {
     height: 200px;
+    width: 100%;
+    text-decoration: none;
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    position: absolute;
+}
+
+.text-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--trans-tag-color);
+    opacity: 1;
 }
 
 .project-tag {
     font-family: var(--main-font);
     font-weight: bold;
-    justify-self: flex-start;
-    align-self: flex-start;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 1px var(--tag-color);
+    padding: 0.1rem 0.3rem;
 }
 
 .translation-tag {
@@ -114,36 +140,12 @@ a {
 
 .project-description {
     font-family: var(--secondary-font);
-    color: var(--light-color);
+    color: var(--dark-color);
     font-weight: 600;
     display: flex;
-    justify-self: flex-end;
     align-self: flex-end;
-}
-
-.project-img {
-    flex: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-@media only screen and (min-width: 600px) {
-    #welcome-section {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        margin: 20% 5%;
-    }
-
-    #photo {
-        min-width: 200px;
-        max-height: 200px;
-    }
-
-    .main-title {
-        font-size: 2rem;
-        margin-top: 20%;
-    }
+    text-shadow: 1px 1px 1px var(--tag-color);
+    padding: 0.2rem 0.3rem;
 }
 
 /* Profiles section */
@@ -170,4 +172,49 @@ a {
     padding: 0.5rem;
     display: block;
     margin: 1.5rem auto;
+}
+
+@media only screen and (min-width: 600px) {
+    #welcome-section {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 20% 10%;
+    }
+
+    .intro {
+        transform: translateY(0);
+    }
+
+    #photo {
+        min-width: 200px;
+        max-height: 200px;
+    }
+
+    .main-title {
+        font-size: 2rem;
+        margin-top: 20%;
+    }
+
+    .main-text {
+        font-size: 4rem;
+        text-align: left;
+        transform: translateX(-1rem);
+    }
+
+    .subtitle {
+        font-size: 2rem;
+        text-align: left;
+        transform: translateX(-1rem);
+    }
+
+    .text-wrapper {
+        opacity: 0;
+    }
+
+    .text-wrapper:hover {
+        transition: all 0.8s ease;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 1;
+    }
 }
