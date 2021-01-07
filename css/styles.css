@@ -32,8 +32,8 @@ a {
 }
 
 #photo {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 130px;
+    max-height: 130px;
     border-radius: 50%;
 }
 
@@ -102,9 +102,21 @@ a {
 
 .project-img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
     position: absolute;
+}
+
+.text-wrapper.translation-tile {
+    background: var(--trans-tag-color);
+}
+
+.text-wrapper.site-tile {
+    background: var(--trans-btn-color);
+}
+
+.text-wrapper.webapp-tile {
+    background: var(--trans-accent-color);
 }
 
 .text-wrapper {
@@ -114,7 +126,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: var(--trans-tag-color);
     opacity: 1;
 }
 
@@ -157,11 +168,13 @@ a {
     justify-content: space-evenly;
     align-items: center;
 }
+
 .fab {
-    font-size: 3rem;
+    font-size: 2.7rem;
     color: var(--accent-color);
     padding: 1rem;
 }
+
 .show-more {
     background-color: var(--btn-color);
     border-radius: 10%;
@@ -175,15 +188,22 @@ a {
 }
 
 @media only screen and (min-width: 600px) {
-    #welcome-section {
+
+    .home-section {
         display: flex;
         justify-content: center;
-        align-content: center;
+        align-items: center;
+    }
+
+    #welcome-section {
+        display: flex;
+        flex-direction: row;
         margin: 20% 10%;
     }
 
     .intro {
-        transform: translateY(0);
+        transform: translateY(-7rem);
+        justify-content: flex-start;
     }
 
     #photo {
@@ -191,30 +211,63 @@ a {
         max-height: 200px;
     }
 
-    .main-title {
-        font-size: 2rem;
-        margin-top: 20%;
-    }
-
     .main-text {
-        font-size: 4rem;
+        font-family: var(--main-font);
+        font-size: 5.8rem;
         text-align: left;
-        transform: translateX(-1rem);
+        transform: translateX(-1.5rem);
     }
 
     .subtitle {
         font-size: 2rem;
         text-align: left;
-        transform: translateX(-1rem);
+        transform: translateX(-1.5rem);
+    }
+
+    .main-title {
+        font-size: 2rem;
+        margin: 20% 0 5%;
+    }
+
+    #skills {
+        font-size: 1.5rem;
+        padding: 3rem 10rem;
+        color: var(--light-color);
+        font-family: var(--secondary-font);
+        line-height: 2;
+    }
+
+    #projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .project-tile {
+        width: 300px;
     }
 
     .text-wrapper {
-        opacity: 0;
+        width: 100%;
     }
 
     .text-wrapper:hover {
         transition: all 0.8s ease;
-        background: rgba(0, 0, 0, 0.6);
+        background: rgba(17, 23, 23, 0.6);
         opacity: 1;
+    }
+
+    .show-more {
+        font-size: 1.5rem;
+        padding: 0.8rem 1rem;
+        display: block;
+        margin: 3rem auto 1rem;
+    }
+
+    #profiles {
+        justify-content: center;
+    }
+
+    .fab {
+        padding: 0 2rem;
     }
 }
