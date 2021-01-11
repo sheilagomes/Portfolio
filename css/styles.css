@@ -48,6 +48,98 @@ a {
     text-decoration: none;
 }
 
+/*  Menu section */
+
+.nav {
+    background: var(--dark-color);
+    position: fixed;
+    right: 0;
+    box-shadow: 0 0 3em rgba(255,255,255,.15);
+    transform: translateX(100%);
+    transition: transform 300ms cubic-bezier(.5, 0, .5, 1)
+}
+
+.nav__list {
+    font-family: var(--secondary-font);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 3em 6em;
+}
+
+.nav__item {
+    margin-bottom: 2em;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--light-color);
+}
+
+.nav__toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background: var(--dark-color);
+    padding: 1em .5em;
+    border: 0;
+    border-radius: .25em 0 0 .25em;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 1.5em;
+  height: 3px;
+  background: var(--light-color);
+  
+  transition: transform 350ms ease-in-out, opacity 200ms linear;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+    bottom: 6px;
+}
+
+.hamburger::after {
+    top: 6px;
+}
+
+/* Navigation open styles */
+
+.nav-open .nav {
+  transform: translateX(0);
+}
+
+/* Change this stuff below */
+
+.nav-open .hamburger {
+  transform: rotate(45deg);
+}
+
+.nav-open .hamburger::before {
+  opacity: 0;
+}
+
+.nav-open .hamburger::after {
+  transform: rotate(90deg) translate(-6px);
+}
+
 /* Home section */
 
 #welcome-section {
@@ -197,25 +289,22 @@ a {
     font-family: var(--main-font);
     font-weight: 600;
     font-size: 1.3rem;
-    padding: 0.4rem;
+    padding: 0.4rem 0.7rem;
+    width: 150px;
+    border-radius: 0 50px 0 0;
+    color: var(--light-color);
 }
 
 .translation-tag {
-    color: var(--light-color);
     background-color: var(--tag-color);
-    width: 160px;
 }
 
 .site-tag {
-    color: var(--light-color);
     background-color: var(--btn-color);
-    width: 160px;
 }
 
 .webapp-tag {
-    color: var(--light-color);
     background-color: var(--accent-color);
-    width: 160px;
 }
 
 .project-description {
@@ -256,6 +345,27 @@ a {
 }
 
 @media only screen and (min-width: 600px) {
+
+    .nav {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .nav__item {
+        font-size: 1.8rem;
+        font-family: var(--main-font);
+    }
+
+    .nav__link:hover, .nav__link:active {
+      text-decoration: underline;
+      color: var(--accent-color);
+    }
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      width: 2em;
+      height: 2px;
+    }
 
     .home-section {
         display: flex;
@@ -321,31 +431,34 @@ a {
     }
 
     .project-tile {
-        margin-top: 0;
+        margin: 0;
     }
 
     .project-img {
-        max-width: 300px;
+        width: 300px;
+        box-sizing:border-box;
     }
 
     .text-wrapper {
          width: 300px;
     }
 
-    .text-wrapper:hover {
+    .project-tile:hover {
         transition: all 0.8s ease;
-        transform: scale(0.98);
+        transform: scale(1.1);
     }
 
     .show-more {
-        font-size: 1.5rem;
-        padding: 0.8rem 1rem;
-        margin: 3rem auto 1rem;
+        display: none;
+    }
+
+    .main-title:last-of-type {
+        margin: 10% 0 5%;
     }
 
     #profiles {
         justify-content: center;
-        padding-bottom: 4rem;
+        padding: 0 0 4rem;
     }
 
     .fab {
