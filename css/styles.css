@@ -50,6 +50,10 @@ a {
 
 /*  Menu section */
 
+nav {
+    z-index: 999;
+}
+
 .nav {
     background: var(--dark-color);
     position: fixed;
@@ -249,11 +253,6 @@ a {
     padding: 0 1rem;
 }
 
-/*.projects-container {
-    max-width: 1920px;
-    margin: 0 auto;
-}*/
-
 #projects {
     margin-top: 2rem;
     display: flex;
@@ -443,10 +442,10 @@ a {
          width: 300px;
     }
 
-    .project-tile:hover {
+    /*.project-tile:hover {
         transition: all 0.8s ease;
         transform: scale(1.1);
-    }
+    }*/
 
     .show-more {
         display: none;
