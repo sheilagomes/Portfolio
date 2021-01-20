@@ -13,14 +13,14 @@
         <span class="hamburger"></span>
       </button>
       <ul class="nav__list">
-        <li class="nav__item"><a href="#welcome" class="nav__link">welcome</a></li>
-        <li class="nav__item"><a href="#skills" class="nav__link">skills</a></li>
+        <li class="nav__item"><a href="#menu-welcome" class="nav__link">welcome</a></li>
+        <li class="nav__item"><a href="#menu-skills" class="nav__link">skills</a></li>
         <li class="nav__item"><a href="#menu-projects" class="nav__link">projects</a></li>
-        <li class="nav__item"><a href="#profiles" class="nav__link">contact</a></li>
+        <li class="nav__item"><a href="#menu-profiles" class="nav__link">contact</a></li>
       </ul>
     </nav>
-    <div class="home-section" id="welcome">
-        <section id="welcome-section">
+    <div class="home-section" id="menu-welcome">
+        <section class="welcome-section">
             <div class="flip-img">
               <div class="flip-img-inner">
                 <div class="flip-img-front">
@@ -38,31 +38,34 @@
             </div>
         </section>
     </div>
-    <div id="skills">
+    <span id="menu-skills"></span>
+    <div class="skills">
         <p>I'm proficient in <span class="highlight">English</span>, <span class="highlight">Portuguese</span>, and  also <span class="highlight">Python</span>, <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, <span class="highlight">Javascript</span>, and <span class="highlight">Java</span>. After getting degrees in <span class="highlight">Tourism</span> and <span class="highlight">Translation</span>, I am currently pursuing a Certificate in <span class="highlight">Systems Analysis and Development</span>.</p>
     </div>
-    <h2 class="main-title" id="menu-projects">This is some of the <span class="highlight">work</span> I've done:</h2>
-    <div id="projects">
-        <a class="project-tile"href="https://www.multitude.trd.br/wp-content/uploads/2020/12/Praticas-recomendadas-para-localizacao-de-jogos.pdf" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/pratRecLocJogos.png" alt="Best Practices on game localization image"><span class="text-wrapper translation-tile"><span class="project-tag translation-tag">translation</span>
+    <span id="menu-projects"></span>
+    <h2 class="main-title">This is some of the <span class="highlight">work</span> I've done:</h2>
+    <div class="projects">
+        <a class="project-tile" href="https://www.multitude.trd.br/wp-content/uploads/2020/12/Praticas-recomendadas-para-localizacao-de-jogos.pdf" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/pratRecLocJogos.png" alt="Best Practices on game localization image"><span class="text-wrapper translation-tile"><span class="project-tag translation-tag">translation</span>
         <span class="project-description">Best Practices on game localization</span></span></a>
-        <a class="project-tile" href="https://sheilagomes.github.io/traducao-doc-python/" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/docPython.png" alt="Python official documentation translation instructions site"><span class="text-wrapper site-tile"><span class="project-tag site-tag">site</span><span class="project-description">Python docs translation instructions</span></span></a>
+        <a class="project-tile" href="https://sheilagomes.github.io/traducao-doc-python/" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/docPython.png" alt="Python official documentation translation instructions site"><span class="text-wrapper site-tile"><span class="project-tag site-tag feature">site</span><span class="project-description">Python docs translation instructions</span></span></a>
         <a class="project-tile" href="https://sheilagomes.github.io/documentation-page/" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/docOmegaT.png" alt="OmegaT information"><span class="text-wrapper site-tile"><span class="project-tag site-tag">site</span><span class="project-description">OmegaT information</span></span></a>
-        <a class="project-tile" href="https://sheilagomes.github.io/Musical-Triangles/" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/musicalTriangles.png" alt="Musical triangles"><span class="text-wrapper webapp-tile"><span class="project-tag webapp-tag">webapp</span><span class="project-description">Musical Triangles</span></span></a>
-        <a class="project-tile" href="https://penseallen.github.io/PensePython2e/" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/penseEmPython.png" alt="Think Python book translation"><span class="text-wrapper translation-tile"><span class="project-tag translation-tag">translation</span><span class="project-description">Think Python book</span></span></a>
-        <a class="project-tile" href="https://sheilagomes.github.io/the-rolling-die/" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/theRollingDie.png" alt="Die face showing number one"><span class="text-wrapper webapp-tile"><span class="project-tag webapp-tag">webapp</span><span class="project-description">The Rolling Die</span></span></a>
-        <a class="project-tile" href="https://www.multitude.trd.br/" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/Multitude.png" alt="Multitude translators' site"><span class="text-wrapper site-tile"><span class="project-tag site-tag">site</span><span class="project-description">Multitude</span></span></a>
-        <a class="project-tile" href="https://www.codeforcuritiba.org/" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/CFC.png" alt="Code for Curitiba site"><span class="text-wrapper site-tile"><span class="project-tag site-tag">site</span><span class="project-description">Code for Curitiba</span></span></a>
-        <a class="project-tile" href="https://sheilagomes.github.io/test-your-agility/" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/test-your-agility.png" alt="Test your agility game"><span class="text-wrapper webapp-tile"><span class="project-tag webapp-tag">webapp</span><span class="project-description">Test Your Agility</span></span></a>
+        <a class="project-tile show-less" href="https://www.barcamp.trd.br/" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/docOmegaT.png" alt="Barcamps"><span class="text-wrapper site-tile"><span class="project-tag site-tag">site</span><span class="project-description">Barcamp</span></span></a>
+        <a class="project-tile show-less" href="https://sheilagomes.github.io/Musical-Triangles/" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/musicalTriangles.png" alt="Musical triangles"><span class="text-wrapper webapp-tile"><span class="project-tag webapp-tag">webapp</span><span class="project-description dark-bgd">Musical Triangles</span></span></a>
+        <a class="project-tile show-less" href="https://penseallen.github.io/PensePython2e/" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/penseEmPython.png" alt="Think Python book translation"><span class="text-wrapper translation-tile"><span class="project-tag translation-tag">translation</span><span class="project-description">Think Python book</span></span></a>
+        <a class="project-tile show-less" href="https://sheilagomes.github.io/the-rolling-die/" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/theRollingDie.png" alt="Die face showing number one"><span class="text-wrapper webapp-tile"><span class="project-tag webapp-tag">webapp</span><span class="project-description">The Rolling Die</span></span></a>
+        <a class="project-tile show-less" href="https://www.multitude.trd.br/" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/Multitude.png" alt="Multitude translators' site"><span class="text-wrapper site-tile"><span class="project-tag site-tag">site</span><span class="project-description dark-bgd">Multitude</span></span></a>
+        <a class="project-tile show-less" href="https://www.codeforcuritiba.org/" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/CFC.png" alt="Code for Curitiba site"><span class="text-wrapper site-tile"><span class="project-tag site-tag">site</span><span class="project-description dark-bgd">Code for Curitiba</span></span></a>
+        <a class="project-tile show-less" href="https://sheilagomes.github.io/test-your-agility/" target="_blank" rel="noopener noreferrer"><img class="project-img" src="images/test-your-agility.png" alt="Test your agility game"><span class="text-wrapper webapp-tile"><span class="project-tag webapp-tag">webapp</span><span class="project-description dark-bgd">Test Your Agility</span></span></a>
     </div>
-    <button class="show-more">Show More</button>
-    <h2 class="main-title" id="menu-up">You can <span class="highlight">find me at</span>:</h2>
-    <div id="profiles">
-        <a href="https://github.com/sheilagomes" id="profile-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" title="sheilagomes's GitHub Profile"></i></a>
-        <a href="https://www.linkedin.com/in/sheilagomes/" id="profile-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" title="sheilagomes's LinkedIn Profile"></i></a>
-        <a href="https://codepen.io/sheilagomes/" id="profile-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-codepen" title="sheilagomes's CodePen Profile"></i></a>
-        <a href="https://medium.com/@sheilagomes" id="profile-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium-m" title="sheilagomes's Medium Profile"></i></a>
-        <a href="https://dev.to/sheilagomes" id="profile-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-dev" title="sheilagomes's DEV Profile"></i></a>
-        <a href="https://www.amazon.com.br/Passo-passo-para-viver-tradu%C3%A7%C3%A3o-ebook/dp/B01N7QIMGN/ref=sr_1_3?dchild=1&amp;qid=1607638671&amp;refinements=p_27%3ASheila+Gomes&amp;s=digital-text&amp;sr=1-3" id="profile-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-amazon" title="sheilagomes's Amazon book"></i></a>
+    <button class="show-more">show more</button>
+    <div class="profiles" id="menu-profiles">
+        <h2 class="main-title">You can <span class="highlight">find me at</span>:</h2>
+        <a href="https://github.com/sheilagomes" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" title="sheilagomes's GitHub Profile"></i></a>
+        <a href="https://www.linkedin.com/in/sheilagomes/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" title="sheilagomes's LinkedIn Profile"></i></a>
+        <a href="https://codepen.io/sheilagomes/" target="_blank" rel="noopener noreferrer"><i class="fab fa-codepen" title="sheilagomes's CodePen Profile"></i></a>
+        <a href="https://medium.com/@sheilagomes" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium-m" title="sheilagomes's Medium Profile"></i></a>
+        <a href="https://dev.to/sheilagomes" target="_blank" rel="noopener noreferrer"><i class="fab fa-dev" title="sheilagomes's DEV Profile"></i></a>
+        <a href="https://www.amazon.com.br/Passo-passo-para-viver-tradu%C3%A7%C3%A3o-ebook/dp/B01N7QIMGN/ref=sr_1_3?dchild=1&amp;qid=1607638671&amp;refinements=p_27%3ASheila+Gomes&amp;s=digital-text&amp;sr=1-3" target="_blank" rel="noopener noreferrer"><i class="fab fa-amazon" title="sheilagomes's Amazon book"></i></a>
     </div>
     <script type="text/javascript" src="index.js"></script>
 </body>

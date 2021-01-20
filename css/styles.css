@@ -1,27 +1,7 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600&family=Open+Sans:ital,wght@0,300;0,400;1,600&display=swap');
@@ -105,7 +85,6 @@ nav {
   width: 1.5em;
   height: 3px;
   background: var(--light-color);
-  
   transition: transform 350ms ease-in-out, opacity 200ms linear;
 }
 
@@ -145,8 +124,11 @@ nav {
 }
 
 /* Home section */
+#menu-welcome {
+    padding-top: 1rem;
+}
 
-#welcome-section {
+.welcome-section {
     padding: 0 1rem;
     display: flex;
     flex-direction: column-reverse;
@@ -229,9 +211,12 @@ nav {
 
 /* Skills section */
 
-#skills {
-    margin: .5rem;
-    padding: 1rem;
+#menu-skills {
+    padding-top: 5rem;
+}
+
+.skills {
+    margin: 4rem 1.2rem;
     color: var(--light-color);
     font-family: var(--secondary-font);
     font-weight: 400;
@@ -248,12 +233,12 @@ nav {
 .main-title {
     font-size: 1.5rem;
     color: var(--light-color);
-    margin-top: 10%;
+    /*margin: 20% 0;*/
     text-align: center;
-    padding: 0 1rem;
+    padding: 2rem 1rem;
 }
 
-#projects {
+.projects {
     margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -317,7 +302,7 @@ nav {
 
 /* Profiles section */
 
-#profiles {
+.profiles {
     padding: 1rem;
     display: flex;
     flex-wrap: wrap;
@@ -341,6 +326,10 @@ nav {
     padding: 0.5rem;
     display: block;
     margin: 1.5rem auto;
+}
+
+.show-less {
+    display: none;
 }
 
 @media only screen and (min-width: 600px) {
@@ -372,7 +361,7 @@ nav {
         align-items: center;
     }
 
-    #welcome-section {
+    .welcome-section {
         flex-direction: row;
         margin: 20% 10%;
         justify-content: center;
@@ -417,13 +406,22 @@ nav {
         margin: 20% 0 5%;
     }
 
-    #skills {
+    #menu-skills {
+        padding-top: 10rem;
+    }
+
+    .skills {
         padding: 3rem 10rem;
         font-size: 1.5rem;
         line-height: 2;
+        min-height: 100vh;
     }
 
-    #projects {
+    #menu-projects {
+        padding-top: 1rem;
+    }
+
+    .projects {
         display: grid;
         grid: auto / repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 3px;
@@ -442,25 +440,38 @@ nav {
          width: 300px;
     }
 
-    /*.project-tile:hover {
-        transition: all 0.8s ease;
-        transform: scale(1.1);
-    }*/
+    .project-tile:hover .project-img,
+    .project-tile:hover .project-description
+     {
+        filter: grayscale(0%);
+        color: var(--dark-color);
+        transition: filter 350ms ease-in-out;
+    }
+
+    .project-tile:hover .dark-bgd {
+        color: var(--light-color);
+    }
 
     .show-more {
         display: none;
     }
 
+    .show-less {
+        display: inline-block;
+    }
+    
     .main-title:last-of-type {
-        margin: 10% 0 5%;
+        font-size: 2rem;
+        margin: 0;
     }
 
-    #profiles {
+    .profiles {
         justify-content: center;
-        padding: 0 0 4rem;
+        align-items: center;
+        padding: 4rem 0;
     }
 
     .fab {
-        padding: 0 2rem;
+        padding: 2rem;
     }
 }
