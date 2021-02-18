@@ -1,6 +1,5 @@
 const navToggle = document.querySelector('.nav__toggle');
 const showProjects = document.querySelector('.show-more');
-// const featuredProjects = document.querySelector('.project-tile');
 const featuredProjects = Array.from(document.querySelectorAll('.project-tile'));
 
 
